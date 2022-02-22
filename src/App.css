@@ -1,38 +1,106 @@
-.App {
+/* total todo box */
+.app {
+  background: #e6b0a3;
+  padding: 30px;
+}
+/* todo lists */
+.todo-list {
+  background-color: whitesmoke;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 100px auto;
+}
+/* todo items */
+.todo {
+  align-items: center;
+  background: #fff;
+  border-radius: 3px;
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  padding: 3px 10px;
+  text-align: justify;
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/*  input and buttons */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
+  margin-top: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.add {
+  border-radius: 0 4px 4px 0;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  padding: 16px;
+  text-transform: capitalize;
+}
+.delete {
+  /* background: linear-gradient(90deg,#040353,#9104e9); */
+  border: none;
+  border-radius: 0 4px 4px 0;
+  /* color: #fff; */
+  cursor: pointer;
+  outline: none;
+  padding: 16px;
+  text-transform: capitalize;
+}
+.complete-undo {
+  border: none;
+  border-radius: 0 4px 4px 0;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  padding: 16px;
+  text-transform: capitalize;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.input {
+  background: transparent;
+  border: 2px solid #804a0db0;
+  border-radius: 4px 0 0 4px;
+  width: 500px;
+  outline: none;
+  padding: 14px 32px 14px 16px;
+}
+/* responsive */
+@media only screen and (max-width: 500px) {
+  .form,
+  .todo {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
   }
-  to {
-    transform: rotate(360deg);
+  .app {
+    padding: o;
+  }
+  .input {
+    width: 85%;
+  }
+  .add {
+    width: 98%;
+  }
+  .delete,
+  .complete-undo {
+    padding: 5px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .input {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 250px) {
+  .input {
+    width: 65%;
   }
 }
